@@ -1,0 +1,10 @@
+        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 12:05:20 2019
+        MODULE PIN_JOINTED__genmod
+          INTERFACE 
+            SUBROUTINE PIN_JOINTED(KM,EA,COORD)
+              REAL(KIND=8), INTENT(OUT) :: KM(:,:)
+              REAL(KIND=8), INTENT(IN) :: EA
+              REAL(KIND=8), INTENT(IN) :: COORD(:,:)
+            END SUBROUTINE PIN_JOINTED
+          END INTERFACE 
+        END MODULE PIN_JOINTED__genmod

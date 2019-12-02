@@ -1,0 +1,9 @@
+        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 12:05:21 2019
+        MODULE COMSUB__genmod
+          INTERFACE 
+            SUBROUTINE COMSUB(BK,LOADS)
+              COMPLEX(KIND=8), INTENT(IN) :: BK(:)
+              COMPLEX(KIND=8), INTENT(INOUT) :: LOADS(0:)
+            END SUBROUTINE COMSUB
+          END INTERFACE 
+        END MODULE COMSUB__genmod

@@ -1,0 +1,14 @@
+        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 12:05:22 2019
+        MODULE BMAT_NONAXI__genmod
+          INTERFACE 
+            SUBROUTINE BMAT_NONAXI(BEE,RADIUS,COORD,DERIV,FUN,IFLAG,LTH)
+              REAL(KIND=8), INTENT(OUT) :: BEE(:,:)
+              REAL(KIND=8), INTENT(OUT) :: RADIUS
+              REAL(KIND=8), INTENT(IN) :: COORD(:,:)
+              REAL(KIND=8), INTENT(IN) :: DERIV(:,:)
+              REAL(KIND=8), INTENT(IN) :: FUN(:)
+              INTEGER(KIND=4), INTENT(IN) :: IFLAG
+              INTEGER(KIND=4), INTENT(IN) :: LTH
+            END SUBROUTINE BMAT_NONAXI
+          END INTERFACE 
+        END MODULE BMAT_NONAXI__genmod

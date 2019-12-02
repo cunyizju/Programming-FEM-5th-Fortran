@@ -1,0 +1,13 @@
+        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 12:05:18 2019
+        MODULE EXC_NODS__genmod
+          INTERFACE 
+            SUBROUTINE EXC_NODS(NOEXE,EXELE,G_NUM,TOTEX,NTOTE,NF)
+              INTEGER(KIND=4), INTENT(IN) :: NOEXE
+              INTEGER(KIND=4), INTENT(IN) :: EXELE(:)
+              INTEGER(KIND=4), INTENT(IN) :: G_NUM(:,:)
+              INTEGER(KIND=4), INTENT(INOUT) :: TOTEX(:)
+              INTEGER(KIND=4), INTENT(INOUT) :: NTOTE
+              INTEGER(KIND=4), INTENT(INOUT) :: NF(:,:)
+            END SUBROUTINE EXC_NODS
+          END INTERFACE 
+        END MODULE EXC_NODS__genmod

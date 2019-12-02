@@ -1,0 +1,20 @@
+        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 12:05:22 2019
+        MODULE MESH_ENSI__genmod
+          INTERFACE 
+            SUBROUTINE MESH_ENSI(ARGV,NLEN,G_COORD,G_NUM,ELEMENT,ETYPE, &
+     &NF,LOADS,NSTEP,NPRI,DTIM,SOLID)
+              CHARACTER(LEN=15), INTENT(IN) :: ARGV
+              INTEGER(KIND=4), INTENT(IN) :: NLEN
+              REAL(KIND=8), INTENT(IN) :: G_COORD(:,:)
+              INTEGER(KIND=4), INTENT(IN) :: G_NUM(:,:)
+              CHARACTER(LEN=15), INTENT(IN) :: ELEMENT
+              INTEGER(KIND=4), INTENT(IN) :: ETYPE(:)
+              INTEGER(KIND=4), INTENT(IN) :: NF(:,:)
+              REAL(KIND=8), INTENT(IN) :: LOADS(:)
+              INTEGER(KIND=4), INTENT(IN) :: NSTEP
+              INTEGER(KIND=4), INTENT(IN) :: NPRI
+              REAL(KIND=8), INTENT(IN) :: DTIM
+              LOGICAL(KIND=4), INTENT(IN) :: SOLID
+            END SUBROUTINE MESH_ENSI
+          END INTERFACE 
+        END MODULE MESH_ENSI__genmod

@@ -1,0 +1,9 @@
+        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 12:05:24 2019
+        MODULE FKDIAG__genmod
+          INTERFACE 
+            SUBROUTINE FKDIAG(KDIAG,G)
+              INTEGER(KIND=4), INTENT(OUT) :: KDIAG(:)
+              INTEGER(KIND=4), INTENT(IN) :: G(:)
+            END SUBROUTINE FKDIAG
+          END INTERFACE 
+        END MODULE FKDIAG__genmod

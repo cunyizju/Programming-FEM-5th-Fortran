@@ -1,0 +1,18 @@
+        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 12:05:18 2019
+        MODULE GEOM_FREESURF__genmod
+          INTERFACE 
+            SUBROUTINE GEOM_FREESURF(IEL,NXE,FIXED_SEEP,FIXED_DOWN,DOWN,&
+     &WIDTH,ANGS,SURF,COORD,NUM)
+              INTEGER(KIND=4), INTENT(IN) :: IEL
+              INTEGER(KIND=4), INTENT(IN) :: NXE
+              INTEGER(KIND=4), INTENT(IN) :: FIXED_SEEP
+              INTEGER(KIND=4), INTENT(IN) :: FIXED_DOWN
+              REAL(KIND=8), INTENT(IN) :: DOWN
+              REAL(KIND=8), INTENT(IN) :: WIDTH(:)
+              REAL(KIND=8), INTENT(IN) :: ANGS(:)
+              REAL(KIND=8), INTENT(IN) :: SURF(:)
+              REAL(KIND=8), INTENT(OUT) :: COORD(:,:)
+              INTEGER(KIND=4), INTENT(OUT) :: NUM(:)
+            END SUBROUTINE GEOM_FREESURF
+          END INTERFACE 
+        END MODULE GEOM_FREESURF__genmod

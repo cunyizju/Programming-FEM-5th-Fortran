@@ -1,0 +1,9 @@
+        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 12:05:19 2019
+        MODULE FMACAT__genmod
+          INTERFACE 
+            SUBROUTINE FMACAT(VMFL,ACAT)
+              REAL(KIND=8), INTENT(IN) :: VMFL(:)
+              REAL(KIND=8), INTENT(OUT) :: ACAT(:,:)
+            END SUBROUTINE FMACAT
+          END INTERFACE 
+        END MODULE FMACAT__genmod

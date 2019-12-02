@@ -1,0 +1,11 @@
+        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 12:05:23 2019
+        MODULE PMSH_ENSI__genmod
+          INTERFACE 
+            SUBROUTINE PMSH_ENSI(ARGV,NLEN,STEP,LOADS)
+              CHARACTER(LEN=15), INTENT(IN) :: ARGV
+              INTEGER(KIND=4), INTENT(IN) :: NLEN
+              INTEGER(KIND=4), INTENT(IN) :: STEP
+              REAL(KIND=8), INTENT(IN) :: LOADS(:)
+            END SUBROUTINE PMSH_ENSI
+          END INTERFACE 
+        END MODULE PMSH_ENSI__genmod

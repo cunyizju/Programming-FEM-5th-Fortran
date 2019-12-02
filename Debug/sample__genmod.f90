@@ -1,0 +1,10 @@
+        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 12:05:21 2019
+        MODULE SAMPLE__genmod
+          INTERFACE 
+            SUBROUTINE SAMPLE(ELEMENT,S,WT)
+              CHARACTER(*), INTENT(IN) :: ELEMENT
+              REAL(KIND=8), INTENT(OUT) :: S(:,:)
+              REAL(KIND=8) ,OPTIONAL, INTENT(OUT) :: WT(:)
+            END SUBROUTINE SAMPLE
+          END INTERFACE 
+        END MODULE SAMPLE__genmod

@@ -1,0 +1,12 @@
+        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 20:23:21 2019
+        MODULE FMGLEM__genmod
+          INTERFACE 
+            SUBROUTINE FMGLEM(FNXE,FNYE,LNXE,G_NUM,LIFTS)
+              INTEGER(KIND=4), INTENT(IN) :: FNXE
+              INTEGER(KIND=4), INTENT(IN) :: FNYE
+              INTEGER(KIND=4), INTENT(IN) :: LNXE
+              INTEGER(KIND=4), INTENT(OUT) :: G_NUM(:,:)
+              INTEGER(KIND=4), INTENT(IN) :: LIFTS
+            END SUBROUTINE FMGLEM
+          END INTERFACE 
+        END MODULE FMGLEM__genmod

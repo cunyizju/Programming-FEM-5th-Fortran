@@ -1,0 +1,15 @@
+        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 12:05:24 2019
+        MODULE STABILITY__genmod
+          INTERFACE 
+            SUBROUTINE STABILITY(KV,GV,KDIAG,TOL,LIMIT,ITERS,EVEC,EVAL)
+              REAL(KIND=8), INTENT(INOUT) :: KV(:)
+              REAL(KIND=8), INTENT(INOUT) :: GV(:)
+              INTEGER(KIND=4), INTENT(IN) :: KDIAG(:)
+              REAL(KIND=8), INTENT(INOUT) :: TOL
+              INTEGER(KIND=4), INTENT(IN) :: LIMIT
+              INTEGER(KIND=4), INTENT(OUT) :: ITERS
+              REAL(KIND=8), INTENT(OUT) :: EVEC(:)
+              REAL(KIND=8), INTENT(INOUT) :: EVAL
+            END SUBROUTINE STABILITY
+          END INTERFACE 
+        END MODULE STABILITY__genmod

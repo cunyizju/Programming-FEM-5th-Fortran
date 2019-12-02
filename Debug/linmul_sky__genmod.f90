@@ -1,0 +1,11 @@
+        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 12:05:24 2019
+        MODULE LINMUL_SKY__genmod
+          INTERFACE 
+            SUBROUTINE LINMUL_SKY(KV,DISPS,LOADS,KDIAG)
+              REAL(KIND=8), INTENT(IN) :: KV(:)
+              REAL(KIND=8), INTENT(IN) :: DISPS(0:)
+              REAL(KIND=8), INTENT(OUT) :: LOADS(0:)
+              INTEGER(KIND=4), INTENT(IN) :: KDIAG(:)
+            END SUBROUTINE LINMUL_SKY
+          END INTERFACE 
+        END MODULE LINMUL_SKY__genmod

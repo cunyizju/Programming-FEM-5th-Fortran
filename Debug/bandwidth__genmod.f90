@@ -1,0 +1,9 @@
+        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 12:05:18 2019
+        MODULE BANDWIDTH__genmod
+          INTERFACE 
+            FUNCTION BANDWIDTH(G) RESULT(NBAND)
+              INTEGER(KIND=4), INTENT(IN) :: G(:)
+              INTEGER(KIND=4) :: NBAND
+            END FUNCTION BANDWIDTH
+          END INTERFACE 
+        END MODULE BANDWIDTH__genmod

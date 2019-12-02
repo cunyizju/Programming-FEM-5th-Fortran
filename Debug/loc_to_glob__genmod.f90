@@ -1,0 +1,11 @@
+        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 12:05:19 2019
+        MODULE LOC_TO_GLOB__genmod
+          INTERFACE 
+            SUBROUTINE LOC_TO_GLOB(LOCAL,GLOBAL,GAMMA,COORD)
+              REAL(KIND=8), INTENT(IN) :: LOCAL(:)
+              REAL(KIND=8), INTENT(OUT) :: GLOBAL(:)
+              REAL(KIND=8), INTENT(IN) :: GAMMA
+              REAL(KIND=8), INTENT(IN) :: COORD(:,:)
+            END SUBROUTINE LOC_TO_GLOB
+          END INTERFACE 
+        END MODULE LOC_TO_GLOB__genmod

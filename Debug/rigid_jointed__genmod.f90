@@ -1,0 +1,13 @@
+        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 12:05:17 2019
+        MODULE RIGID_JOINTED__genmod
+          INTERFACE 
+            SUBROUTINE RIGID_JOINTED(KM,PROP,GAMMA,ETYPE,IEL,COORD)
+              REAL(KIND=8), INTENT(OUT) :: KM(:,:)
+              REAL(KIND=8), INTENT(IN) :: PROP(:,:)
+              REAL(KIND=8), INTENT(IN) :: GAMMA(:)
+              INTEGER(KIND=4), INTENT(IN) :: ETYPE(:)
+              INTEGER(KIND=4), INTENT(IN) :: IEL
+              REAL(KIND=8), INTENT(IN) :: COORD(:,:)
+            END SUBROUTINE RIGID_JOINTED
+          END INTERFACE 
+        END MODULE RIGID_JOINTED__genmod

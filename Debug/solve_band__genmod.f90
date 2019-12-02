@@ -1,0 +1,10 @@
+        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 12:05:18 2019
+        MODULE SOLVE_BAND__genmod
+          INTERFACE 
+            SUBROUTINE SOLVE_BAND(PB,WORK,LOADS)
+              REAL(KIND=8), INTENT(IN) :: PB(:,:)
+              REAL(KIND=8), INTENT(IN) :: WORK(:,:)
+              REAL(KIND=8), INTENT(OUT) :: LOADS(0:)
+            END SUBROUTINE SOLVE_BAND
+          END INTERFACE 
+        END MODULE SOLVE_BAND__genmod

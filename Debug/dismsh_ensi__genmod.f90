@@ -1,0 +1,12 @@
+        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 12:05:20 2019
+        MODULE DISMSH_ENSI__genmod
+          INTERFACE 
+            SUBROUTINE DISMSH_ENSI(ARGV,NLEN,STEP,NF,LOADS)
+              CHARACTER(LEN=15), INTENT(IN) :: ARGV
+              INTEGER(KIND=4), INTENT(IN) :: NLEN
+              INTEGER(KIND=4), INTENT(IN) :: STEP
+              INTEGER(KIND=4), INTENT(IN) :: NF(:,:)
+              REAL(KIND=8), INTENT(IN) :: LOADS(:)
+            END SUBROUTINE DISMSH_ENSI
+          END INTERFACE 
+        END MODULE DISMSH_ENSI__genmod
