@@ -1,9 +1,0 @@
-        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 21:50:14 2019
-        MODULE GAUSS_BAND__genmod
-          INTERFACE 
-            SUBROUTINE GAUSS_BAND(PB,WORK)
-              REAL(KIND=8), INTENT(INOUT) :: PB(:,:)
-              REAL(KIND=8), INTENT(INOUT) :: WORK(:,:)
-            END SUBROUTINE GAUSS_BAND
-          END INTERFACE 
-        END MODULE GAUSS_BAND__genmod

@@ -1,9 +1,0 @@
-        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 21:50:19 2019
-        MODULE DETERMINANT__genmod
-          INTERFACE 
-            FUNCTION DETERMINANT(JAC) RESULT(DET)
-              REAL(KIND=8), INTENT(IN) :: JAC(:,:)
-              REAL(KIND=8) :: DET
-            END FUNCTION DETERMINANT
-          END INTERFACE 
-        END MODULE DETERMINANT__genmod

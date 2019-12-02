@@ -1,9 +1,0 @@
-        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 21:50:19 2019
-        MODULE CHOBK2__genmod
-          INTERFACE 
-            SUBROUTINE CHOBK2(KB,LOADS)
-              REAL(KIND=8), INTENT(IN) :: KB(:,:)
-              REAL(KIND=8), INTENT(INOUT) :: LOADS(0:)
-            END SUBROUTINE CHOBK2
-          END INTERFACE 
-        END MODULE CHOBK2__genmod

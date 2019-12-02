@@ -1,9 +1,0 @@
-        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 21:50:14 2019
-        MODULE SPARIN__genmod
-          INTERFACE 
-            SUBROUTINE SPARIN(KV,KDIAG)
-              REAL(KIND=8), INTENT(INOUT) :: KV(:)
-              INTEGER(KIND=4), INTENT(IN) :: KDIAG(:)
-            END SUBROUTINE SPARIN
-          END INTERFACE 
-        END MODULE SPARIN__genmod

@@ -1,8 +1,0 @@
-        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 21:50:18 2019
-        MODULE CHOLIN__genmod
-          INTERFACE 
-            SUBROUTINE CHOLIN(KB)
-              REAL(KIND=8), INTENT(INOUT) :: KB(:,:)
-            END SUBROUTINE CHOLIN
-          END INTERFACE 
-        END MODULE CHOLIN__genmod

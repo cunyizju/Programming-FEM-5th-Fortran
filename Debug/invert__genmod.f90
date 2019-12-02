@@ -1,8 +1,0 @@
-        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 21:50:17 2019
-        MODULE INVERT__genmod
-          INTERFACE 
-            SUBROUTINE INVERT(MATRIX)
-              REAL(KIND=8), INTENT(INOUT) :: MATRIX(:,:)
-            END SUBROUTINE INVERT
-          END INTERFACE 
-        END MODULE INVERT__genmod
