@@ -1,9 +1,0 @@
-        !COMPILER-GENERATED INTERFACE MODULE: Mon Dec 02 12:05:20 2019
-        MODULE GETNAME__genmod
-          INTERFACE 
-            SUBROUTINE GETNAME(ARGV,NLEN)
-              CHARACTER(*), INTENT(OUT) :: ARGV
-              INTEGER(KIND=4), INTENT(OUT) :: NLEN
-            END SUBROUTINE GETNAME
-          END INTERFACE 
-        END MODULE GETNAME__genmod

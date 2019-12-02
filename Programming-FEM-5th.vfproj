@@ -86,7 +86,6 @@
 		<File RelativePath=".\main\formupv.f90"/>
 		<File RelativePath=".\main\fsparv.f90"/>
 		<File RelativePath=".\main\gauss_band.f90"/>
-		<File RelativePath=".\main\getname.f90"/>
 		<File RelativePath=".\main\glob_to_axial.f90"/>
 		<File RelativePath=".\main\glob_to_loc.f90"/>
 		<File RelativePath=".\main\hinge.f90"/>
@@ -130,8 +129,9 @@
 		<File RelativePath=".\main\vmdpl.f90"/>
 		<File RelativePath=".\main\vmflow.f90"/></Filter></Filter>
 		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
-		<File RelativePath=".\Programming-FEM-5th_1.dat"/>
-		<File RelativePath=".\Programming-FEM-5th_2.dat"/>
+		<Filter Name="subordinate">
+		<File RelativePath=".\subordinate\p41_1.dat"/>
+		<File RelativePath=".\subordinate\p41_2.dat"/></Filter>
 		<File RelativePath=".\Programming-FEM-5th.f90"/></Filter>
 		<File RelativePath=".\ReadMe.txt"/></Files>
 	<Globals/></VisualStudioProject>

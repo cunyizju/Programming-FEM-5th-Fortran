@@ -33,9 +33,11 @@
      REAL(iwp),ALLOCATABLE::action(:),eld(:),ell(:),km(:,:),kv(:),loads(:),   &
        prop(:,:),value(:)
     !-----------------------input and initialisation--------------------------
-     CALL getname(argv,nlen)
-     OPEN(10,FILE=argv(1:nlen)//'.dat')
-     OPEN(11,FILE=argv(1:nlen)//'.res')
+     ! CALL getname(argv,nlen)
+     !OPEN(10,FILE=argv(1:nlen)//'.dat')
+     !OPEN(11,FILE=argv(1:nlen)//'.res')
+     OPEN(10, FILE='.//subordinate//p41_1.dat')
+     OPEN(11, FILE='.//subordinate//p41_1.res')
      READ(10,*)nels,np_types
      nn=nels+1
      ALLOCATE(g(ndof),num(nod),nf(nodof,nn),etype(nels),ell(nels),eld(ndof),  &
