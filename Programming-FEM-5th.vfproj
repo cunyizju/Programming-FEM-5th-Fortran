@@ -129,9 +129,17 @@
 		<File RelativePath=".\main\vmdpl.f90"/>
 		<File RelativePath=".\main\vmflow.f90"/></Filter></Filter>
 		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
-		<Filter Name="subordinate">
-		<File RelativePath=".\subordinate\p41_1.dat"/>
-		<File RelativePath=".\subordinate\p41_2.dat"/></Filter>
+		<Filter Name="subordinates">
+		<Filter Name="Coupled-Problems"/>
+		<Filter Name="Material-Non-linearity"/>
+		<Filter Name="Steady-State-Flow"/>
+		<Filter Name="Transient-Problems"/>
+		<Filter Name="Static-Equilibrium-Linear-Elastic-Solids"/>
+		<Filter Name="Static-Equilibrium-Structures">
+		<File RelativePath=".\subordinates\Static-Equilibrium-Structures\p41.f90"/>
+		<File RelativePath=".\subordinates\Static-Equilibrium-Structures\p41_1.dat"/>
+		<File RelativePath=".\subordinates\Static-Equilibrium-Structures\p41_2.dat"/>
+		<File RelativePath=".\subordinates\Static-Equilibrium-Structures\transfile.bat"/></Filter></Filter>
 		<File RelativePath=".\Programming-FEM-5th.f90"/></Filter>
 		<File RelativePath=".\ReadMe.txt"/></Files>
 	<Globals/></VisualStudioProject>
