@@ -1,0 +1,100 @@
+%!PS-Adobe-1.0
+%%DocumentFonts: none
+%%Pages: 1
+%%EndComments
+/m {moveto} def
+/l {lineto} def
+/s {stroke} def
+/c {closepath} def
+/edef {exch def} bind def
+/arrow {/@to_y edef /@to_x edef /@from_y edef /@from_x edef
+/@dx @to_x @from_x sub def /@dy @to_y @from_y sub def
+/@length @dx @dx mul @dy @dy mul add sqrt def
+/@angle @dy @dx atan def
+gsave @from_x @from_y translate @angle rotate
+0 0 moveto @length 0 lineto currentpoint stroke newpath moveto
+-4 -2 rlineto @length 0 moveto
+-4  2 rlineto stroke grestore
+} def
+/*sf {
+exch findfont exch
+dup type /arraytype eq {makefont}{scalefont} ifelse setfont
+} bind def
+/languagelevel where
+{pop languagelevel} {1} ifelse
+2 lt { % ifelse
+/sf /*sf load def
+} { % else
+/sf /selectfont load def
+} ifelse
+%%EndProlog
+%%Page: 0 1
+gsave
+   108.00   205.86 translate
+     0.50 setlinewidth
+     0.00   377.42      0.00   358.55 arrow
+s
+    94.36   377.42     92.84   360.26 arrow
+s
+   188.71   377.42    186.14   365.37 arrow
+s
+   283.07   377.42    279.96   372.50 arrow
+s
+   377.42   377.42    374.34   380.27 arrow
+s
+     0.00   283.07      0.00   264.45 arrow
+s
+   188.71   283.07    192.51   271.30 arrow
+s
+   377.42   283.07    382.11   286.00 arrow
+s
+     0.00   188.71      0.00   174.21 arrow
+s
+    94.36   188.71     99.68   175.48 arrow
+s
+   188.71   188.71    198.02   179.29 arrow
+s
+   283.07   188.71    294.65   184.81 arrow
+s
+   377.42   188.71    389.22   191.18 arrow
+s
+     0.00    94.36      0.00    86.50 arrow
+s
+   188.71    94.36    201.83    88.98 arrow
+s
+   377.42    94.36    394.30    95.83 arrow
+s
+    94.36     0.00    102.15     0.00 arrow
+s
+   188.71     0.00    203.09     0.00 arrow
+s
+   283.07     0.00    301.49     0.00 arrow
+s
+   377.42     0.00    396.00     0.00 arrow
+s
+     0.00   188.71 m
+     0.00   377.42 l
+ s
+     0.00   377.42 m
+   188.71   377.42 l
+ s
+   188.71   377.42 m
+   377.42   377.42 l
+ s
+   377.42   377.42 m
+   377.42   188.71 l
+ s
+     0.00     0.00 m
+     0.00   188.71 l
+ s
+   188.71     0.00 m
+     0.00     0.00 l
+ s
+   377.42   188.71 m
+   377.42     0.00 l
+ s
+   377.42     0.00 m
+   188.71     0.00 l
+ s
+grestore
+showpage
