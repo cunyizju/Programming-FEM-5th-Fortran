@@ -130,7 +130,23 @@
 		<File RelativePath=".\main\vmflow.f90"/></Filter></Filter>
 		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
 		<Filter Name="subordinates">
-		<Filter Name="Coupled-Problems"/>
+		<Filter Name="Coupled-Problems">
+		<File RelativePath=".\subordinates\Coupled-Problems\p111.dat"/>
+		<File RelativePath=".\subordinates\Coupled-Problems\p111.f95"/>
+		<File RelativePath=".\subordinates\Coupled-Problems\p112.dat"/>
+		<File RelativePath=".\subordinates\Coupled-Problems\p112.f95"/>
+		<File RelativePath=".\subordinates\Coupled-Problems\p113.dat"/>
+		<File RelativePath=".\subordinates\Coupled-Problems\p113.f95"/>
+		<File RelativePath=".\subordinates\Coupled-Problems\p114.dat"/>
+		<File RelativePath=".\subordinates\Coupled-Problems\p114.f95"/>
+		<File RelativePath=".\subordinates\Coupled-Problems\p115.dat"/>
+		<File RelativePath=".\subordinates\Coupled-Problems\p115.f95"/>
+		<File RelativePath=".\subordinates\Coupled-Problems\p116.dat"/>
+		<File RelativePath=".\subordinates\Coupled-Problems\p116.f95"/>
+		<File RelativePath=".\subordinates\Coupled-Problems\p117.dat"/>
+		<File RelativePath=".\subordinates\Coupled-Problems\p117.f95"/>
+		<File RelativePath=".\subordinates\Coupled-Problems\p118.dat"/>
+		<File RelativePath=".\subordinates\Coupled-Problems\p118.f95"/></Filter>
 		<Filter Name="Material-Non-linearity"/>
 		<Filter Name="Static-Equilibrium-Linear-Elastic-Solids"/>
 		<Filter Name="Static-Equilibrium-Structures">
