@@ -130,7 +130,7 @@
 		<File RelativePath=".\main\vmflow.f90"/></Filter></Filter>
 		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
 		<Filter Name="subordinates">
-		<Filter Name="Coupled-Problems">
+		<Filter Name="Forced-Vibrations">
 		<File RelativePath=".\subordinates\Coupled-Problems\p111.dat"/>
 		<File RelativePath=".\subordinates\Coupled-Problems\p111.f95"/>
 		<File RelativePath=".\subordinates\Coupled-Problems\p112.dat"/>
