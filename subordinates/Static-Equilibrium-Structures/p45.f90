@@ -1,5 +1,4 @@
-!     Last change:  DV   19 Oct 2004    7:58 pm
-PROGRAM p45
+SUBROUTINE p45(input_file,output_file)
 !-------------------------------------------------------------------------
 ! Program 4.5 Analysis of elasto-plastic beams or rigid-jointed frames
 !             using 2-node beam or beam/rod elements in 1-, 2- or
@@ -8,6 +7,8 @@ PROGRAM p45
  USE main
  USE geom
  IMPLICIT NONE
+ CHARACTER(len=60),INTENT(IN) :: input_file
+ CHARACTER(len=60),INTENT(OUT) :: output_file
  INTEGER,PARAMETER::iwp=SELECTED_REAL_KIND(15)
  INTEGER::i,iel,incs,iters,iy,k,limit,loaded_nodes,ndim,ndof,nels,neq,    &
    nod=2,nodof,nn,nprops,np_types,nr,nlen
@@ -21,9 +22,8 @@ PROGRAM p45
    oldis(:),prop(:,:),react(:),val(:,:)
  CHARACTER(LEN=15)::argv
 !-----------------------input and initialisation--------------------------
- CALL getname(argv,nlen)
- OPEN(10,FILE=argv(1:nlen)//'.dat')
- OPEN(11,FILE=argv(1:nlen)//'.res')
+ OPEN(10,FILE=input_file)
+ OPEN(11,FILE=output_file)
  READ(10,*)nels,nn,ndim,nprops,np_types
  IF(ndim==1)nodof=2
  IF(ndim==2)nodof=3
@@ -129,5 +129,4 @@ PROGRAM p45
    WRITE(11,'(A,I5,A)')" Converged in",iters," iterations"
    IF(iters==limit.AND.limit/=1)EXIT load_incs
  END DO load_incs
-STOP
-END PROGRAM p45
+END SUBROUTINE p45

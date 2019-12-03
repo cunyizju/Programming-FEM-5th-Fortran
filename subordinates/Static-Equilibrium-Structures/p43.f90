@@ -1,5 +1,4 @@
-!     Last change:  DV   19 Oct 2004    7:58 pm
-PROGRAM p43
+SUBROUTINE p43(input_file,output_file)
 !-------------------------------------------------------------------------
 ! Program 4.3 Analysis of elastic beams using 2-node beam elements
 !             (elastic foundation optional).
@@ -7,6 +6,8 @@ PROGRAM p43
  USE main
  USE geom
  IMPLICIT NONE
+ CHARACTER(len=60),INTENT(IN) :: input_file
+ CHARACTER(len=60),INTENT(OUT) :: output_file
  INTEGER,PARAMETER::iwp=SELECTED_REAL_KIND(15)
  INTEGER::fixed_freedoms,i,iel,k,loaded_nodes,ndof=4,nels,neq,nod=2,      &
    nodof=2,nn,nprops,np_types,nr,nlen
@@ -18,9 +19,8 @@ PROGRAM p43
    mm(:,:),prop(:,:),value(:)
  CHARACTER(LEN=15)::argv
 !-----------------------input and initialisation--------------------------
- CALL getname(argv,nlen)
- OPEN(10,FILE=argv(1:nlen)//'.dat')
- OPEN(11,FILE=argv(1:nlen)//'.res')
+ OPEN(10,FILE=input_file)
+ OPEN(11,FILE=output_file)
  READ(10,*)nels,nprops,np_types
  nn=nels+1
  ALLOCATE(g(ndof),num(nod),nf(nodof,nn),etype(nels),ell(nels),eld(ndof),  &
@@ -92,6 +92,5 @@ PROGRAM p43
    WRITE(11,'(I5,4E12.4)')iel,action
  END DO elements_3
  CALL beamdis(loads,nf,0.40_iwp,10,nels,ell,argv,nlen,12)
-STOP
-END PROGRAM p43
+END SUBROUTINE p43
 

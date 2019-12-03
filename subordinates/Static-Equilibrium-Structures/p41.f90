@@ -1,4 +1,4 @@
- SUBROUTINE p41(input_file,output_file)
+SUBROUTINE p41(input_file,output_file)
     !-------------------------------------------------------------------------
     ! Program 4.1 One dimensional analysis of axially loaded elastic rods
     !             using 2-node rod elements.
@@ -91,5 +91,4 @@
     action=MATMUL(km,eld)
     WRITE(11,'(I5,2E12.4)')iel,action
     END DO elements_3
-    STOP   
 END SUBROUTINE

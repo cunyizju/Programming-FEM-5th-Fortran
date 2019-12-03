@@ -1,5 +1,4 @@
-!     Last change:  DV   19 Oct 2004    7:58 pm
-PROGRAM p46              
+SUBROUTINE p46(input_file,output_file)
 !-------------------------------------------------------------------------
 ! Program 4.6 Stability (buckling) analysis of elastic beams using 2-node
 !             beam elements (elastic foundation optional).
@@ -7,6 +6,8 @@ PROGRAM p46
  USE main
  USE geom
  IMPLICIT NONE
+ CHARACTER(len=60),INTENT(IN) :: input_file
+ CHARACTER(len=60),INTENT(OUT) :: output_file
  INTEGER,PARAMETER::iwp=SELECTED_REAL_KIND(15)
  INTEGER::i,iel,iters,k,limit,ndof=4,nels,neq,nod=2,nodof=2,nn,nprops,    &
    np_types,nr,nlen
@@ -17,9 +18,8 @@ PROGRAM p46
    mm(:,:),prop(:,:)
  CHARACTER(LEN=15)::argv
 !-----------------------input and initialisation--------------------------
- CALL getname(argv,nlen)
- OPEN(10,FILE=argv(1:nlen)//'.dat')
- OPEN(11,FILE=argv(1:nlen)//'.res')
+ OPEN(10,FILE=input_file)
+ OPEN(11,FILE=output_file)
  READ(10,*)nels,nprops,np_types
  nn=nels+1
  ALLOCATE(nf(nodof,nn),ell(nels),num(nod),g(ndof),g_g(ndof,nels),         &
@@ -71,6 +71,5 @@ PROGRAM p46
  END DO    
  WRITE(11,'(/A,I5,A)')" Converged in",iters," iterations"
  CALL beamdis(evec,nf,0.40_iwp,10,nels,ell,argv,nlen,12)
-STOP
-END PROGRAM p46
+END SUBROUTINE p46
 

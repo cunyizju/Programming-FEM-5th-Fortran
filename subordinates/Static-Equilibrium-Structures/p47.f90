@@ -1,5 +1,4 @@
-!     Last change:  DV   19 Oct 2004    7:59 pm
-PROGRAM p47
+SUBROUTINE p47(input_file,output_file)
 !-------------------------------------------------------------------------
 ! Program 4.7 Analysis of plates using 4-node rectangular plate elements.
 !             Homogeneous material with identical elements.
@@ -8,6 +7,8 @@ PROGRAM p47
  USE main
  USE geom
  IMPLICIT NONE
+ CHARACTER(len=60),INTENT(IN) :: input_file
+ CHARACTER(len=60),INTENT(OUT) :: output_file
  INTEGER,PARAMETER::iwp=SELECTED_REAL_KIND(15)
  INTEGER::fixed_freedoms,i,iel,k,loaded_nodes,ndim=2,ndof=16,nels,neq,    &
    nip=16,nn,nod=4,nodof=4,nprops=2,np_types,nr,nxe,nye,nlen
@@ -21,9 +22,8 @@ PROGRAM p47
    g_coord(:,:),km(:,:),kv(:),loads(:),points(:,:),prop(:,:),x_coords(:), &
    y_coords(:),value(:),weights(:)   
 !-----------------------input and initialisation--------------------------
- CALL getname(argv,nlen)
- OPEN(10,FILE=argv(1:nlen)//'.dat')
- OPEN(11,FILE=argv(1:nlen)//'.res')
+ OPEN(10,FILE=input_file)
+ OPEN(11,FILE=output_file)
  READ(10,*)nxe,nye,np_types,aa,bb,th 
  CALL mesh_size(element,nod,nels,nn,nxe,nye)
  ALLOCATE(nf(nodof,nn),g_coord(ndim,nn),g_num(nod,nels),g(ndof),bm(3),    &
@@ -122,5 +122,4 @@ PROGRAM p47
    END DO moms
    WRITE(11,'(I5,3E12.4)')iel,bm
  END DO
-STOP
-END PROGRAM p47
+END SUBROUTINE p47

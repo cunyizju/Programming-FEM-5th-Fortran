@@ -1,5 +1,4 @@
-!     Last change:  DV   19 Oct 2004    7:58 pm
-PROGRAM p44
+SUBROUTINE p44(input_file,output_file)
 !-------------------------------------------------------------------------
 ! Program 4.4 Analysis of elastic rigid-jointed frames using 2-node
 !             beam/rod elements in 2- or 3-dimensions.
@@ -7,6 +6,8 @@ PROGRAM p44
  USE main
  USE geom
  IMPLICIT NONE
+ CHARACTER(len=60),INTENT(IN) :: input_file
+ CHARACTER(len=60),INTENT(OUT) :: output_file
  INTEGER,PARAMETER::iwp=SELECTED_REAL_KIND(15)
  INTEGER::fixed_freedoms,i,iel,k,loaded_nodes,ndim,ndof,nels,neq,nod=2,   &
    nodof,nn,nprops,np_types,nr,nlen
@@ -18,9 +19,8 @@ PROGRAM p44
    km(:,:),kv(:),loads(:),prop(:,:),value(:)
  CHARACTER(LEN=15)::argv
 !-----------------------input and initialisation--------------------------
- CALL getname(argv,nlen)
- OPEN(10,FILE=argv(1:nlen)//'.dat')
- OPEN(11,FILE=argv(1:nlen)//'.res')
+ OPEN(10,FILE=input_file)
+ OPEN(11,FILE=output_file)
  READ(10,*)nels,nn,ndim,nprops,np_types
  IF(ndim==2)nodof=3
  IF(ndim==3)nodof=6
@@ -100,6 +100,5 @@ PROGRAM p44
      WRITE(11,'(A,6E12.4)')"     ",action(7:12)
    END IF
  END DO elements_3
-STOP
-END PROGRAM p44
+END SUBROUTINE p44
 
