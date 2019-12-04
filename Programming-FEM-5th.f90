@@ -21,6 +21,7 @@ program ProgrammingFEM5th
     
     CALL StaticEquilibriumStructures()
     CALL StaticEquilibriumLinearElasticSolids()    
+    CALL SteadyStateFlow()
     CALL CoupledProblems()
     CALL ForcedVibrations()
 
