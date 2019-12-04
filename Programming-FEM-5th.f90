@@ -19,11 +19,14 @@ program ProgrammingFEM5th
 !---------------------------------- declaration statement --------------------------------------    
     IMPLICIT NONE
     
-    CALL StaticEquilibriumStructures()
-    CALL StaticEquilibriumLinearElasticSolids()    
-    CALL SteadyStateFlow()
-    CALL CoupledProblems()
+    !CALL StaticEquilibriumStructures()
+    !CALL StaticEquilibriumLinearElasticSolids()  
+    !CALL MaterialNonlinearity()
+    !CALL SteadyStateFlow()
+    !CALL CoupledProblems()
+    CALL EigenvalueProblems()
     CALL ForcedVibrations()
+
 
 
 end program ProgrammingFEM5th
