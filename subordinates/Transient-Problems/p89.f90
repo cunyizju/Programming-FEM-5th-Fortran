@@ -1,4 +1,4 @@
-PROGRAM p89      
+SUBROUTINE p89(input_file,output_file)     
 !-------------------------------------------------------------------------
 ! Program 8.9 Plane analysis of the diffusion-convection equation
 !             using 4-node rectangular quadrilaterals. Implicit time
@@ -7,7 +7,9 @@ PROGRAM p89
 !-------------------------------------------------------------------------
  USE main
  USE geom
- IMPLICIT NONE                
+ IMPLICIT NONE
+ CHARACTER(len=60),INTENT(IN) :: input_file
+ CHARACTER(len=60),INTENT(OUT) :: output_file                
  INTEGER,PARAMETER::iwp=SELECTED_REAL_KIND(15)
  INTEGER::i,iel,j,nci,ndim=2,nels,neq,nip=4,nlen,nn,nod=4,npri,np_types,  &
  nres,nstep,ntime,nxe,nye
@@ -20,9 +22,9 @@ PROGRAM p89
    fun(:),g_coord(:,:),jac(:,:),kay(:,:),kc(:,:),kv(:),loads(:),ntn(:,:), &
    mm(:,:),points(:,:),prop(:,:),weights(:),x_coords(:),y_coords(:)
 !-------------------------input and initialisation------------------------
- CALL getname(argv,nlen)
- OPEN(10,FILE=argv(1:nlen)//'.dat')
- OPEN(11,FILE=argv(1:nlen)//'.res')
+ 
+ OPEN(10,FILE=input_file) 
+ OPEN(11,FILE=output_file)
  READ(10,*)nxe,nye,np_types 
  CALL mesh_size(element,nod,nels,nn,nxe,nye)
  neq=nn
@@ -116,5 +118,5 @@ PROGRAM p89
      time,loads(nres)*exp(-ux*g_coord(1,nres)/two/kay(1,1))*              &
      exp(-uy*g_coord(2,nres)/two/kay(2,2))
  END DO timesteps
-STOP
-END PROGRAM p89
+
+END SUBROUTINE p89

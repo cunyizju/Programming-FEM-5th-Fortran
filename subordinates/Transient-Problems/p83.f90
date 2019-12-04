@@ -1,4 +1,4 @@
-PROGRAM p83
+SUBROUTINE p83(input_file,output_file)
 !-------------------------------------------------------------------------
 ! Program 8.3 One dimensional consolidation analysis using 2-node "rod"
 !             elements. Explicit time integration. Element-by-element.
@@ -6,6 +6,8 @@ PROGRAM p83
 !-------------------------------------------------------------------------
  USE main
  IMPLICIT NONE
+ CHARACTER(len=60),INTENT(IN) :: input_file
+ CHARACTER(len=60),INTENT(OUT) :: output_file
  INTEGER,PARAMETER::iwp=SELECTED_REAL_KIND(15)
  INTEGER::fixed_freedoms,i,iel,j,nels,neq,nlen,nod=2,npri,nprops=1,       &
    np_types,nres,nstep,ntime
@@ -17,9 +19,9 @@ PROGRAM p83
  REAL(iwp),ALLOCATABLE::ell(:),globma(:),kc(:,:),loads(:),mass(:),mm(:,:),&
    newlo(:),press(:),prop(:,:),store_mm(:,:,:),value(:)  
 !-----------------------input and initialisation--------------------------
- CALL getname(argv,nlen)
- OPEN(10,FILE=argv(1:nlen)//'.dat')
- OPEN(11,FILE=argv(1:nlen)//'.res')
+ 
+ OPEN(10,FILE=input_file) 
+ OPEN(11,FILE=output_file)
  READ(10,*)nels,np_types
  neq=nels+1
  ALLOCATE(num(nod),etype(nels),kc(nod,nod),mm(nod,nod),press(0:neq),      &
@@ -80,8 +82,8 @@ PROGRAM p83
  WRITE(11,'(/A,E10.4,A)')"    Depth     Pressure (time=",ntime*dtim,")"
  WRITE(11,'(3E12.4)')0.0,press(1)
  WRITE(11,'(2E12.4)')(SUM(ell(1:i)),press(i+1),i=1,nels)
-STOP
-END PROGRAM p83
+
+END SUBROUTINE p83
 
 
 

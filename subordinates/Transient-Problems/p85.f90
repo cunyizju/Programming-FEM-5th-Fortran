@@ -1,4 +1,4 @@
-PROGRAM p85
+SUBROUTINE p85(input_file,output_file)
 !-------------------------------------------------------------------------
 ! Program 8.5 Plane or axisymmetric consolidation analysis using 4-node
 !             rectangular quadrilaterals. Mesh numbered in x(r)- or y(z)-
@@ -9,6 +9,8 @@ PROGRAM p85
  USE main
  USE geom
  IMPLICIT NONE
+ CHARACTER(len=60),INTENT(IN) :: input_file
+ CHARACTER(len=60),INTENT(OUT) :: output_file
  INTEGER,PARAMETER::iwp=SELECTED_REAL_KIND(15)
  INTEGER::cg_iters,cg_limit,fixed_freedoms,i,iel,j,k,nci,ndim=2,nels,neq, &
    nip=4,nlen,nn,nod=4,npri,np_types,nres,nstep,ntime,nxe,nye
@@ -24,9 +26,9 @@ PROGRAM p85
    storka(:,:,:),storkb(:,:,:),u(:),value(:),weights(:),x(:),xnew(:),     &
    x_coords(:),y_coords(:)
 !-----------------------input and initialisation--------------------------
- CALL getname(argv,nlen)
- OPEN(10,FILE=argv(1:nlen)//'.dat')
- OPEN(11,FILE=argv(1:nlen)//'.res')
+ 
+ OPEN(10,FILE=input_file) 
+ OPEN(11,FILE=output_file)
  READ(10,*)type_2d,dir,nxe,nye,cg_tol,cg_limit,np_types
  CALL mesh_size(element,nod,nels,nn,nxe,nye)
  neq=nn
@@ -139,5 +141,5 @@ PROGRAM p85
    IF(j/npri*npri==j)                                                      &
      WRITE(11,'(2e12.4,7x,i5)')time,loads(nres),cg_iters
  END DO timesteps
-STOP
-END PROGRAM p85
+
+END SUBROUTINE p85

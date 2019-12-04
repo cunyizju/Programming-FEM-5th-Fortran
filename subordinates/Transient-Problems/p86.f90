@@ -1,4 +1,4 @@
-PROGRAM p86
+SUBROUTINE p86(input_file,output_file)
 !-------------------------------------------------------------------------
 ! Program 8.6 Plane or axisymmetric analysis of the consolidation equation
 !             using 4-node rectangular quadrilaterals. Mesh numbered in
@@ -8,6 +8,8 @@ PROGRAM p86
  USE main
  USE geom
  IMPLICIT NONE
+ CHARACTER(len=60),INTENT(IN) :: input_file
+ CHARACTER(len=60),INTENT(OUT) :: output_file
  INTEGER,PARAMETER::iwp=SELECTED_REAL_KIND(15)
  INTEGER::fixed_freedoms,i,iel,j,nci,ndim=2,nels,neq,nip=4,nlen,nn,nod=4, &
    npri,np_types,nres,nstep,ntime,nxe,nye
@@ -20,9 +22,9 @@ PROGRAM p86
    newlo(:),ntn(:,:),mm(:,:),points(:,:),prop(:,:),store_mm(:,:,:),       &
    value(:),weights(:),x_coords(:),y_coords(:)
 !-----------------------input and initialisation--------------------------
- CALL getname(argv,nlen)
- OPEN(10,FILE=argv(1:nlen)//'.dat')
- OPEN(11,FILE=argv(1:nlen)//'.res')
+ 
+ OPEN(10,FILE=input_file) 
+ OPEN(11,FILE=output_file)
  READ(10,*)type_2d,dir,nxe,nye,np_types
  CALL mesh_size(element,nod,nels,nn,nxe,nye)
  neq=nn
@@ -104,5 +106,5 @@ PROGRAM p86
    END IF
    IF(j/npri*npri==j)WRITE(11,'(2e12.4)')time,loads(nres)
  END DO timesteps
-STOP
-END PROGRAM p86
+
+END SUBROUTINE p86

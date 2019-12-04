@@ -1,4 +1,4 @@
-PROGRAM p88
+SUBROUTINE p88(input_file,output_file)
 !-------------------------------------------------------------------------
 ! Program 8.8 General two- (plane) or three-dimensional analysis of the
 !             consolidation equation. Implicit time integration using
@@ -6,7 +6,9 @@ PROGRAM p88
 !-------------------------------------------------------------------------
  USE main
  USE geom
- IMPLICIT NONE    
+ IMPLICIT NONE
+ CHARACTER(len=60),INTENT(IN) :: input_file
+ CHARACTER(len=60),INTENT(OUT) :: output_file    
  INTEGER,PARAMETER::iwp=SELECTED_REAL_KIND(15)
  INTEGER::fixed_freedoms,i,iel,j,nci,ndim,nels,neq,nip,nlen,nn,nod=4,npri,&
    np_types,nres,nstep,ntime
@@ -18,9 +20,9 @@ PROGRAM p88
    g_coord(:,:),jac(:,:),kay(:,:),kc(:,:),kv(:),loads(:),newlo(:),        &
    ntn(:,:),mm(:,:),points(:,:),prop(:,:),storbp(:),value(:),weights(:)
 !-----------------------input and initialisation--------------------------
- CALL getname(argv,nlen)
- OPEN(10,FILE=argv(1:nlen)//'.dat')
- OPEN(11,FILE=argv(1:nlen)//'.res')
+ 
+ OPEN(10,FILE=input_file) 
+ OPEN(11,FILE=output_file)
  READ(10,*)element,nels,nn,nip,nod,ndim,np_types
  neq=nn
  ALLOCATE(points(nip,ndim),g_coord(ndim,nn),coord(nod,ndim),fun(nod),     &
@@ -105,5 +107,5 @@ PROGRAM p88
      CALL contour(loads,g_coord,g_num,nci,argv,nlen,13)
    IF(j/npri*npri==j)WRITE(11,'(2e12.4)')time,loads(nres)
  END DO timesteps
-STOP
-END PROGRAM p88
+
+END SUBROUTINE p88

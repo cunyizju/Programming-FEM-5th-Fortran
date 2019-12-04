@@ -1,4 +1,4 @@
-PROGRAM p810
+SUBROUTINE p810(input_file,output_file)
 !-------------------------------------------------------------------------
 ! Program 8.10 Plane analysis of the diffusion-convection equation
 !              using 4-node rectangular quadrilaterals. Implicit time
@@ -8,6 +8,8 @@ PROGRAM p810
  USE main
  USE geom
  IMPLICIT NONE
+ CHARACTER(len=60),INTENT(IN) :: input_file
+ CHARACTER(len=60),INTENT(OUT) :: output_file
  INTEGER,PARAMETER::iwp=SELECTED_REAL_KIND(15)
  INTEGER::i,iel,j,k,nband,ndim=2,nels,neq,fixed_freedoms,nip=4,nlen,nn,   &
    nod=4,npri,np_types,nres,nstep,ntime,nxe,nye
@@ -21,9 +23,9 @@ PROGRAM p810
    loads(:),ntn(:,:),pb(:,:),mm(:,:),points(:,:),prop(:,:),storpb(:),     &
    weights(:),work(:,:),x_coords(:),y_coords(:)
 !-------------------------input and initialisation------------------------
- CALL getname(argv,nlen)
- OPEN(10,FILE=argv(1:nlen)//'.dat')
- OPEN(11,FILE=argv(1:nlen)//'.res')
+ 
+ OPEN(10,FILE=input_file) 
+ OPEN(11,FILE=output_file)
  READ(10,*)nxe,nye,np_types                       
  CALL mesh_size(element,nod,nels,nn,nxe,nye)
  neq=nn
@@ -118,5 +120,5 @@ PROGRAM p810
  DO i=1,nye+1
    WRITE(11,'(2e12.4)')y_coords(i),conc(i)
  END DO  
-STOP
-END PROGRAM p810
+
+END SUBROUTINE p810
