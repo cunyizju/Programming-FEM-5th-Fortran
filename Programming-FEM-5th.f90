@@ -20,8 +20,10 @@ program ProgrammingFEM5th
     IMPLICIT NONE
     
     CALL StaticEquilibriumStructures()
+    CALL StaticEquilibriumLinearElasticSolids()    
     CALL CoupledProblems()
     CALL ForcedVibrations()
+
 
 end program ProgrammingFEM5th
     
