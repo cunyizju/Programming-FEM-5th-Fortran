@@ -1,6 +1,6 @@
 SUBROUTINE geom_freesurf(iel,nxe,fixed_seep,fixed_down,down,              &
   width,angs,surf,coord,num)
-!
+! Used in p73
 ! This subroutine forms the coordinates and steering vector
 ! for 4-node quads numbering in the x-direction
 ! (Laplace's equation, variable mesh, 1-freedom per node).
@@ -8,8 +8,10 @@ SUBROUTINE geom_freesurf(iel,nxe,fixed_seep,fixed_down,down,              &
  IMPLICIT NONE
  INTEGER,PARAMETER::iwp=SELECTED_REAL_KIND(15)
  REAL(iwp),INTENT(IN)::width(:),angs(:),surf(:),down 
+ !
  REAL(iwp),INTENT(OUT)::coord(:,:)
  INTEGER,INTENT(IN)::iel,nxe,fixed_seep,fixed_down
+ !
  INTEGER,INTENT(OUT)::num(:)
  REAL(iwp)::angr(SIZE(angs)),pi,b1,b2,tan1,tan2,fac1,fac2,zero=0.0_iwp,   &
    pt5=0.5_iwp,one=1.0_iwp,small=0.0001_iwp,d180=180.0_iwp

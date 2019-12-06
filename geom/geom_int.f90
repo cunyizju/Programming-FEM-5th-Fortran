@@ -1,5 +1,5 @@
 MODULE geom
-!
+!'OOP' in Fortran
 INTERFACE
 SUBROUTINE bc_rect(nxe,nye,nf,dir)
  IMPLICIT NONE

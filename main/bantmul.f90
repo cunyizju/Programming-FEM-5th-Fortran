@@ -1,5 +1,5 @@
 SUBROUTINE bantmul(kb,loads,ans)
-!
+! Used in p810
 ! This subroutine multiplies an unsymmetrical band kb by the vector loads.
 ! Could be much improved for vector processors.
 !

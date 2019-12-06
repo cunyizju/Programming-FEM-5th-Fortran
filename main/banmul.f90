@@ -1,4 +1,5 @@
 SUBROUTINE banmul(kb,loads,ans)
+! Used in p103
 ! This subroutine multiplies a symmetrical band kb by the vector loads.
 ! 
  IMPLICIT NONE

@@ -1,5 +1,5 @@
 FUNCTION bandwidth(g) RESULT(nband)
-!
+! Used in p91, p101-p103, p112, p115, p810
 ! This function finds the element bandwidth from g.
 !
  IMPLICIT NONE     

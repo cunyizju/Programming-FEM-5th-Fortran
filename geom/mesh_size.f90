@@ -1,16 +1,17 @@
 SUBROUTINE mesh_size(element,nod,nels,nn,nxe,nye,nze)
-!
+!  Used in many subroutines
 !  This subroutine returns the number of elements (nels) and the number
-!  of nodes (nn) in a 2-d geometry-created mesh.
-!   Parameters:
-!   element: [string] triangle quadrilateral hexahedron   nod: [integer] number of nodes per element   
-!   nels   : [integer] total number of elements           nn : [integer] total number of nodes in problem       
-!   nie    : [integer] elements counting in i-direction      
+!  of nodes (nn) in a 2-d geometry-created mesh.    
 !
  IMPLICIT NONE
+ !element: [string] triangle quadrilateral hexahedron
  CHARACTER(LEN=15),INTENT(IN)::element
+ !  nod  : [integer] number of nodes per element
+ !  nie  : [integer] elements counting in i-direction
  INTEGER,INTENT(IN)::nod,nxe,nye
  INTEGER,INTENT(IN),OPTIONAL::nze
+ !  nels : [integer] total number of elements           
+ !  nn   : [integer] total number of nodes in problem   
  INTEGER,INTENT(OUT)::nels,nn
  IF(element=="triangle")THEN
    nels=nxe*nye*2

@@ -1,18 +1,19 @@
 SUBROUTINE bc_rect(nxe,nye,nf,dir)
 !
 ! This subroutine generates the nf array for a rectangular mesh
-! of 8-node quadrilaterals fully fixed on the base and with
+! of '8-node quadrilaterals' fully fixed on the base and with
 ! vertical rollers on the left and right sides. Nodes numbered
 ! in the x- or y-direction
 !
  IMPLICIT NONE
- ! input: nxe, nye, dir
+ ! nie : [integer] elements counting in i-direction
  INTEGER,INTENT(IN)::nxe,nye
+ ! dir : [string] x or y or z
  CHARACTER(LEN=1),INTENT(IN)::dir
- ! output: nf matrix
+ !  nf : [integer] node freedom array e.g. nf(1,0)=1
  INTEGER,INTENT(OUT)::nf(:,:)
  INTEGER::nm,ic,i,j
-!
+ !
  IF(dir=='y')THEN            
    nm=0
    ic=0

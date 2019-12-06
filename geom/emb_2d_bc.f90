@@ -3,8 +3,14 @@ SUBROUTINE emb_2d_bc(nx1,nx2,ny1,ny2,nf)
 ! This subroutine generates the nf array for a 2-d slope geometry.
 !
  IMPLICIT NONE
+ !nx1 : number of columns of elements in embankment
+ !nx2 : number of columns of elements to right of toe
+ !ny1 : number of rows of elements in embankment
+ !ny2 : number of rows of elements in foundation
  INTEGER,INTENT(IN)::nx1,nx2,ny1,ny2
+ !nf  : node freedom array
  INTEGER,INTENT(OUT)::nf(:,:)
+ !nye : number of rows of elements in y-direction
  INTEGER::nm,ic,i,j,nye
  nye=ny1+ny2
  nm=0
@@ -107,25 +113,3 @@ SUBROUTINE emb_2d_bc(nx1,nx2,ny1,ny2,nf)
  END IF
 RETURN
 END SUBROUTINE emb_2d_bc
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,5 +1,6 @@
 SUBROUTINE formnf(nf)
-!
+! Used in many subroutines such as p41-p47, p51-p57, p61, p62, p65, p69, p610
+! p91-p96, p101-p104, p111-p118
 ! This subroutine forms the nf matrix.
 ! nf  : nodal freedom matrix
  IMPLICIT NONE

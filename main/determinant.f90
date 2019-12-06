@@ -4,6 +4,7 @@ FUNCTION determinant(jac)RESULT(det)
 ! Jacobian matrix.
 !
  IMPLICIT NONE    
+ !SELECTED_REAL_KIND: https://gcc.gnu.org/onlinedocs/gcc-7.1.0/gfortran/SELECTED_005fREAL_005fKIND.html#SELECTED_005fREAL_005fKIND
  INTEGER,PARAMETER::iwp=SELECTED_REAL_KIND(15)
  REAL(iwp),INTENT(IN)::jac(:,:)
  REAL(iwp)::det
@@ -15,6 +16,7 @@ FUNCTION determinant(jac)RESULT(det)
  CASE(2)
    det=jac(1,1)*jac(2,2)-jac(1,2)*jac(2,1)
  CASE(3)
+!rank = 3
    det=jac(1,1)*(jac(2,2)*jac(3,3)-jac(3,2)*jac(2,3))
    det=det-jac(1,2)*(jac(2,1)*jac(3,3)-jac(3,1)*jac(2,3))
    det=det+jac(1,3)*(jac(2,1)*jac(3,2)-jac(3,1)*jac(2,2))

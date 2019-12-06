@@ -47,6 +47,7 @@ SUBROUTINE p63(input_file,output_file)
  READ(10,*)prop
  etype=1 
  IF(np_types>1)READ(10,*)((etype(j+(i-1)*nye),i=1,nxe),j=1,nye)
+ ! compute the node freedom array in y direction
  CALL bc_rect(nxe,nye,nf,'y')
  neq=MAXVAL(nf) 
  READ(10,*)qs,x_coords,y_coords

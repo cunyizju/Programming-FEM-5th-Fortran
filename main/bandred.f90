@@ -1,5 +1,5 @@
 SUBROUTINE bandred(a,d,e)
-!
+! Used in p101-p103
 ! This subroutine transforms a real symmetric band matrix a,
 ! of order n and band width iw, to tridiagonal form by an appropriate
 ! sequence of Jacobi rotations. During the transformation the

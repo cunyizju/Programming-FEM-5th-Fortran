@@ -15,17 +15,17 @@ SUBROUTINE MaterialNonlinearity()
     CHARACTER(LEN=60) :: input_p612, output_p612 
     CHARACTER(LEN=60) :: input_p613, output_p613   
 !***********************************************************************************************
-    input_p61 = './/subordinates//Material-Non-linearity//p61.dat'
-    output_p61 = './/subordinates//Material-Non-linearity//p61.res'
-    CALL p61(input_p61, output_p61)   
-!***********************************************************************************************
-    input_p62 = './/subordinates//Material-Non-linearity//p62.dat'
-    output_p62 = './/subordinates//Material-Non-linearity//p62.res'
-    CALL p62(input_p62, output_p62)  
-!***********************************************************************************************
-    input_p63 = './/subordinates//Material-Non-linearity//p63.dat'
-    output_p63 = './/subordinates//Material-Non-linearity//p63.res'
-    CALL p63(input_p63, output_p63)   
+!    input_p61 = './/subordinates//Material-Non-linearity//p61.dat'
+!    output_p61 = './/subordinates//Material-Non-linearity//p61.res'
+!    CALL p61(input_p61, output_p61)   
+!!***********************************************************************************************
+!    input_p62 = './/subordinates//Material-Non-linearity//p62.dat'
+!    output_p62 = './/subordinates//Material-Non-linearity//p62.res'
+!    CALL p62(input_p62, output_p62)  
+!!***********************************************************************************************
+!    input_p63 = './/subordinates//Material-Non-linearity//p63.dat'
+!    output_p63 = './/subordinates//Material-Non-linearity//p63.res'
+!    CALL p63(input_p63, output_p63)   
 !***********************************************************************************************
     input_p64 = './/subordinates//Material-Non-linearity//p64.dat'
     output_p64 = './/subordinates//Material-Non-linearity//p64.res'

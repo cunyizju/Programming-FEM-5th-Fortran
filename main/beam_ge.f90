@@ -1,5 +1,5 @@
 SUBROUTINE beam_gm(gm,ell)
-!
+! Used in p46
 ! This subroutine forms the beam geometric matrix for stability analysis.
 !
  IMPLICIT NONE

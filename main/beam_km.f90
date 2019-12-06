@@ -1,5 +1,5 @@
 SUBROUTINE beam_km(km,ei,ell)
-!
+! Used in p43, p46, p101, p111
 ! This subroutine forms the stiffness matrix of a
 ! beam element (bending only).
 !
