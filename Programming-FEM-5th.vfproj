@@ -291,5 +291,6 @@
 		<File RelativePath=".\subordinates\Transient-Problems\p89.f90"/>
 		<File RelativePath=".\subordinates\Transient-Problems\TransientProblems.f90"/></Filter></Filter>
 		<File RelativePath=".\Programming-FEM-5th.f90"/></Filter>
+		<File RelativePath=".\README.md"/>
 		<File RelativePath=".\ReadMe.txt"/></Files>
 	<Globals/></VisualStudioProject>

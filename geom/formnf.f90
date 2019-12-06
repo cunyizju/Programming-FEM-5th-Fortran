@@ -1,7 +1,7 @@
 SUBROUTINE formnf(nf)
 !
 ! This subroutine forms the nf matrix.
-!
+! nf  : nodal freedom matrix
  IMPLICIT NONE
  INTEGER,INTENT(IN OUT)::nf(:,:)
  INTEGER::i,j,m

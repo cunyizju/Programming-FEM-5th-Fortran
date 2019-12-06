@@ -28,7 +28,9 @@ SUBROUTINE p51(input_file,output_file)
  OPEN(11,FILE=output_file)
  READ(10,*)type_2d,element,nod,dir,nxe,nye,nip,np_types
  CALL mesh_size(element,nod,nels,nn,nxe,nye)
- ndof=nod*nodof
+ !ndof: number of degrees of freedom per element
+ !nodof: number of degrees of freedom per node
+ ndof=nod*nodof   
  IF(type_2d=='axisymmetric')nst=4
  ALLOCATE(nf(nodof,nn),points(nip,ndim),g(ndof),g_coord(ndim,nn),fun(nod),&
    coord(nod,ndim),jac(ndim,ndim),g_num(nod,nels),der(ndim,nod),          &
