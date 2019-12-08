@@ -1,5 +1,5 @@
 SUBROUTINE bc_rect(nxe,nye,nf,dir)
-!
+! Used in p63, p66, p67, p68
 ! This subroutine generates the nf array for a rectangular mesh
 ! of '8-node quadrilaterals' fully fixed on the base and with
 ! vertical rollers on the left and right sides. Nodes numbered

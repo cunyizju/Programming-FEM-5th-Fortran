@@ -1,5 +1,5 @@
 SUBROUTINE emb_3d_geom(iel,nx1,nx2,ny1,ny2,nze,w1,s1,w2,h1,h2,d1,coord,num)
-!
+! Used in p612, p613
 ! This subroutine forms the nodal coordinates and numbering for a 3-d
 ! slope of 20-node hexahedra. Nodes and elements numbered in xz planes
 ! going in the y-direction.
@@ -148,25 +148,3 @@ SUBROUTINE emb_3d_geom(iel,nx1,nx2,ny1,ny2,nze,w1,s1,w2,h1,h2,d1,coord,num)
  coord(20,:)=pt5*(coord(19,:)+coord(13,:))
 RETURN
 END SUBROUTINE emb_3d_geom
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

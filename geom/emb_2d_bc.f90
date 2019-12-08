@@ -1,5 +1,5 @@
 SUBROUTINE emb_2d_bc(nx1,nx2,ny1,ny2,nf)
-!
+! Used in p64
 ! This subroutine generates the nf array for a 2-d slope geometry.
 !
  IMPLICIT NONE

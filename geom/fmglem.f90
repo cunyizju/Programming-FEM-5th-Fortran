@@ -1,5 +1,5 @@
 SUBROUTINE fmglem(fnxe,fnye,lnxe,g_num,lifts)
-!
+! Used in p69
 ! This subroutine returns g_num for the mesh.
 !
  IMPLICIT NONE

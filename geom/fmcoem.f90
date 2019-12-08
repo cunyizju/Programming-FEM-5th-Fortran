@@ -1,6 +1,6 @@
 SUBROUTINE fmcoem(g_num,g_coord,fwidth,fdepth,width,depth,                &
   lnxe,lifts,fnxe,fnye,itype)
-!
+! Used in p69
 ! This subroutine returns g_coord for the mesh.
 !
  IMPLICIT NONE

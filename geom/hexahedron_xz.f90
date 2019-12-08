@@ -1,5 +1,5 @@
 SUBROUTINE hexahedron_xz(iel,x_coords,y_coords,z_coords,coord,num)
-!
+! Used in p53
 ! This subroutine generates nodal coordinates and numbering for
 ! 8, 14 or 20-node "bricks" counting x-z planes in the y-direction.
 !

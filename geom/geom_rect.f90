@@ -1,5 +1,5 @@
 SUBROUTINE geom_rect(element,iel,x_coords,y_coords,coord,num,dir)
-!
+! Used in p73
 ! This subroutine forms the coordinates and connectivity for a
 ! rectangular mesh of rt. angled triangular elements (3, 6, 10 or 15-node)
 ! or quadrilateral elements (4, 8 or 9-node) counting in the

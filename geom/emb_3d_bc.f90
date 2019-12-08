@@ -1,5 +1,5 @@
 SUBROUTINE emb_3d_bc(ifix,nx1,nx2,ny1,ny2,nze,nf)
-!
+! Used in p612, p613
 ! This subroutine generates the nf array for a 3-d slope geometry.
 ! Side boundary conditions:
 ! smooth-smooth  ifix=1  (for checking against plane-strain)

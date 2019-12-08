@@ -1,5 +1,5 @@
 SUBROUTINE emb_2d_geom(iel,nx1,nx2,ny1,ny2,w1,s1,w2,h1,h2,coord,num)
-!
+! Used in p64
 ! This subroutine forms the nodal coordinates and numbering for a 2-d
 ! slope of 8-node quadrilaterals. Nodes numbering in the y-direction,
 ! elements numbered in the x-direction.
