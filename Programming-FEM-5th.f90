@@ -30,9 +30,9 @@ program ProgrammingFEM5th
 !---------------------------------- declaration statement --------------------------------------    
     IMPLICIT NONE
     
-    !CALL StaticEquilibriumStructures()
-    !CALL StaticEquilibriumLinearElasticSolids()  
-    CALL MaterialNonlinearity() !Require more than half an hour. It is recommended to run this subroutine alone.
+    CALL StaticEquilibriumStructures()
+    CALL StaticEquilibriumLinearElasticSolids()  
+    !CALL MaterialNonlinearity() !Require more than half an hour. It is recommended to run this subroutine alone.
     CALL SteadyStateFlow()
     CALL TransientProblems()
     CALL CoupledProblems()
