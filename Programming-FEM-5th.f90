@@ -31,13 +31,13 @@ program ProgrammingFEM5th
     IMPLICIT NONE
     
     CALL StaticEquilibriumStructures()
-    CALL StaticEquilibriumLinearElasticSolids()  
+    !CALL StaticEquilibriumLinearElasticSolids()  
     !CALL MaterialNonlinearity() !Require more than half an hour. It is recommended to run this subroutine alone.
-    CALL SteadyStateFlow()
-    CALL TransientProblems()
-    CALL CoupledProblems()
-    CALL EigenvalueProblems()
-    CALL ForcedVibrations()
+    !CALL SteadyStateFlow()
+    !CALL TransientProblems()
+    !CALL CoupledProblems()
+    !CALL EigenvalueProblems()
+    !CALL ForcedVibrations()
 end program ProgrammingFEM5th
     
    
